@@ -1,0 +1,145 @@
+.clock_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  margin: 0%;
+}
+.clock {
+  border: 20px solid darkcyan;
+  height: 200px;
+  width: 200px;
+  outline: 1px solid white;
+  position: relative;
+  border-radius: 50%;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,204,255,1) 0%);
+}
+
+.hand {
+  --rotation: 0;
+  background-color: aqua;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+
+.min_hand {
+  transform: rotate(10deg);
+}
+
+.number_container {
+  --rotation: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transform: rotate(var(--rotation));
+}
+
+.number1 {
+  --rotation: 30deg;
+}
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
+
+.number {
+  --rotate: 0;
+  transform: rotate(var(--rotate));
+}
+.num1 {
+  --rotate: -30deg;
+}
+.num2 {
+  --rotate: -60deg;
+}
+.num3 {
+  --rotate: -90deg;
+}
+.num4 {
+  --rotate: -120deg;
+}
+.num5 {
+  --rotate: -150deg;
+}
+.num6 {
+  --rotate: -180deg;
+}
+.num7 {
+  --rotate: -210deg;
+}
+.num8 {
+  --rotate: -240deg;
+}
+.num9 {
+  --rotate: -270deg;
+}
+.num10 {
+  --rotate: -300deg;
+}
+.num11 {
+  --rotate: -330deg;
+}
+.clock .sec_hand {
+  width: 3px;
+  height: 45%;
+  background-color: burlywood;
+}
+
+.clock .min_hand {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+
+.clock .hour_hand {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
